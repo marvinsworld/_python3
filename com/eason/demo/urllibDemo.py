@@ -4,6 +4,7 @@
 #!/usr/bin/python
 import urllib.request
 
+
 class urllibDemo():
     def __init__(self):
         super().__init__()
@@ -28,18 +29,19 @@ class urllibDemo():
     def opern(self):
         url = "http://www.baidu.com"
 
-        headers = {#'User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
-                   'Accept':'text/html;q=0.9,*/*;q=0.8',
-                   'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.3'#,
-                   #'Accept-Encoding':'gzip'#,
-#                   'Connection':'close',
-#                   'Referer':None #注意如果依然不能抓取的话，这里可以设置抓取网站的host
+        headers = {
+            # 'User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+            'Accept': 'text/html;q=0.9,*/*;q=0.8',
+            'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3'  #,
+            #'Accept-Encoding':'gzip'#,
+            #                   'Connection':'close',
+            #                   'Referer':None #注意如果依然不能抓取的话，这里可以设置抓取网站的host
         }
 
         opener = urllib.request.build_opener()
-        opener.addheaders('Accept','text/html;q=0.9,*/*;q=0.8')
+        opener.addheaders('Accept', 'text/html;q=0.9,*/*;q=0.8')
 
-        #opener.addheaders = [headers]
+        # opener.addheaders = [headers]
         data = opener.open(url).read()
 
         print(data)
@@ -49,14 +51,15 @@ class urllibDemo():
         opener = urllib.request.build_opener(proxy_support)
         urllib.request.install_opener(opener)
 
-        #urllib.request.urlretrieve("http://quloushang.com/?fromuid=14611")
+        # urllib.request.urlretrieve("http://quloushang.com/?fromuid=14611")
 
 
         a = urllib.request.urlopen("http://quloushang.com/?fromuid=14611").read().decode("gbk")
-#        print(a)
+
+# print(a)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     demo = urllibDemo()
     demo.proxyurl()
 

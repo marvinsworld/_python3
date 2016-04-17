@@ -9,7 +9,7 @@ if __name__ == "__main__":
     b = Browser(driver_name="chrome")
     b.visit("http://www.baidu.com")  ###注意不要去掉http://
 
-    b.fill('wd', '国庆是猪')
+    b.fill('wd', '国庆是aa')
     button = b.find_by_id('su')
 
     button.click()
