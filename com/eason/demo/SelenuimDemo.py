@@ -20,12 +20,12 @@ class SelenuimDemo():
 
 if __name__=="__main__":
     chrome_option = webdriver.ChromeOptions()
-    chrome_option.add_argument("--proxy-server=27.191.234.69:9999")
+    chrome_option.add_argument("--proxy-server=39.78.235.191git :8888")
 
     driver = webdriver.Chrome(
-        executable_path="C:/Users/Administrator/AppData/Local/Google/Chrome/Application/chromedriver.exe",
+        executable_path="/usr/local/bin/chromedriver",
         chrome_options=chrome_option)
-    driver.get('http://quloushang.com/?fromuid=14611')
+    driver.get('http://www.baidu.com')
     print(driver.title)
 
 #    driver.get("http://www.python.org")

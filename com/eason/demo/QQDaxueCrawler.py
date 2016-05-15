@@ -15,7 +15,7 @@ class QQDaxueCrawler:
     def crawl(self, filename):
         result = []
 
-        file = open("/home/eason/javawork/_python3/crawler/data/video_cache_2")
+        file = open("/home/eason/javawork/_python3/crawler/data/video_cache_4")
         lines = file.readlines()
         for line in lines:
             if self.parse(line):
